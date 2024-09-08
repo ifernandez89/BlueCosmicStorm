@@ -199,7 +199,7 @@ font: 30px BIZ UDGothic, sans-serif;
     display: flex;
     flex-direction: column;
     font-size: 25px;
-    margin-top: 15px;
+    /*margin-top: 15px;*/
     /*padding-right: 10px;*/
   }
   .canalizar-title {
