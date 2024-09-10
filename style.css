@@ -1,11 +1,78 @@
-  body{
-    background-color: #EEEEEE;
+body {
+    background: linear-gradient(135deg, #ffffff, #ffffff, #0a192f, #172a45);
+  }
+  .back{
+    background-image: url(BlueCosmicStorm4.png);
+    background-size: 100% 120% ;
+  }
+  .back2{
+    background-image: url(sahumoBack2.png);
+    background-size: 100% 100% ;
+  }
+  .sec2{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*font-family: poppins;*/
+}
+.sec3{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*font-family: poppins;*/
+}
+  .sec2 > h1 {
+    animation: revealing;
+    animation-timeline: view(block);
+    animation-range: cover 0% cover 50%;
+    margin: 0px;
+  }
+  .sec3 > p {
+    animation: revealing2;
+    animation-timeline: view(block);
+    animation-range: cover 0% cover 50%;
+    margin: 0px;
+  }
+  @keyframes revealing {
+    from {
+      color: gray;
+      margin-right: 100vw;
+      filter: blur(50px);
+      opacity: 0.5;
+    }
+    to {
+      margin: 0px;
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes revealing2 {
+    from {
+      color: gray;
+      margin-left: 100vw;
+      filter: blur(50px);
+      opacity: 0.5;
+    }
+    to {
+      margin: 0px;
+      filter: blur(0px);
+      opacity: 1;
+    }
   }
   .mancias-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .mancias-container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -150px;
   }
   .header { 
     display: flex; 
@@ -78,7 +145,15 @@ font: 30px BIZ UDGothic, sans-serif;
   }
   .content-wrapper {
     display: flex;
-    margin-top: 80px;
+    margin-top: 150px;
+    width: 100%;
+    gap: 20px;
+    font-weight: 400;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .content-wrapper2 {
+    display: flex;
     width: 100%;
     gap: 20px;
     font-weight: 400;
@@ -99,18 +174,23 @@ font: 30px BIZ UDGothic, sans-serif;
     color: rgba(0, 0, 0, 0.7);
     text-align: justify;
     text-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    font-size: 38px;
+  }
+  .mancias-title3 {
+    color: rgba(0, 0, 0, 0.7);
+    text-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
     font-size: 40px;
   }
   .mancias-description {
     display: flex;
     margin-top: 10px;
     flex-direction: column;
-    width: 400px;
-    height: 525px;
+    width: 500px;
+    height: 570px;
   }
   .mancias-description2 {
     display: flex;
-    margin-top: 90px;
+    margin-top: 60px;
     margin-left: 20px;
     padding-left: 20px;
     flex-direction: row;
@@ -120,13 +200,25 @@ font: 30px BIZ UDGothic, sans-serif;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 20px;
     text-align: justify;
-    margin-left: 15px;
+    margin-left: 20px;
   }
   .description-text2 {
     color: #4a4a4a;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    font-size: 15px;
+    font-size: 16px;
     text-align: left;
+  }
+  .description-text3 {
+    color: #4a4a4a;
+    font-size: 10px;
+    text-align: right;
+  }
+  .description-text3 {
+    color: #4a4a4a;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 25px;
+    text-align: right;
+    margin-right: 20px;
   }
   .cta-button {
     border-radius: 20px;
@@ -166,7 +258,7 @@ font: 30px BIZ UDGothic, sans-serif;
     display: flex;
     flex-direction: column;
     font-size: 25px;
-    margin-top: 15px;
+    /*margin-top: 15px;*/
     /*padding-right: 10px;*/
   }
   .canalizar-title {
@@ -206,14 +298,19 @@ font: 30px BIZ UDGothic, sans-serif;
     display: flex;
     flex-direction: column;
     font-family: BioRhyme, sans-serif;
-    text-align: right;
+    text-align: left;
     padding-right: 10px;
- 
   }
   .canalizar-item {
     align-self: end;
     margin-top: 10px;
-    font-size: 25px;
+    font-size: 20px;
+    text-shadow: 0 8px 8px rgba(0, 0, 0, 0.25);
+  }
+  .canalizar-item2 {
+    align-self: end;
+    margin-top: 10px;
+    font-size: 16px;
     text-shadow: 0 8px 8px rgba(0, 0, 0, 0.25);
   }
   .canalizar-item:hover {
@@ -327,6 +424,17 @@ font: 30px BIZ UDGothic, sans-serif;
   .minimal-container:hover {
     transform: scale(1.1) rotate(5deg);
   }
+  .minimal-container3 {
+    width: 100%;
+    height: 100%;
+    display:flex;
+    min-height: 0;
+    max-width: 0;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+    z-index: -1;
+  }
   @keyframes shake {
     0%, 100% {
       transform: translateX(0);
@@ -348,42 +456,35 @@ font: 30px BIZ UDGothic, sans-serif;
     min-height: 513px;
     max-width: 473px;
   }
-
   .image-container {
     display: flex;
     flex-direction: column;
     border-radius: 30px;
     position: relative;
-    min-height: 659px;
-    max-width: 621px;
+    min-height: 600px;
+    max-width: 560px;
     justify-content: center;
-    padding: 56px 57px;
   }
-
   .background-image {
     position: absolute;
     height: 70%;
     width: 70%;
     object-fit: fill;
-
   }
-
   .foreground-image {
     aspect-ratio: 0.93;
-
     width: 100%;
     border-radius: 30px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   }
-
   @media (max-width: 991px) {
     .image-container {
       padding: 0 20px;
     }
-
     .foreground-image {
       max-width: 100%;
     }
   }
+  
 
 
