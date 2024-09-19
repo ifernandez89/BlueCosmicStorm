@@ -11,9 +11,9 @@
 </head>
 <body>
   <div class="w3-top">
-    <div class="w3-bar mancias-container" style="z-index: 1;">
+    <div class="w3-bar mancias-container">
       <header class="header">
-        <a href="#"><div class="logo"></div></a>
+        <a href="#" class="w3-hide-small"><div class="logo"></div></a>
         <nav class="nav-menu">
           <a href="#oraculos" class="nav-item">Oráculos</a>
           <a href="#registros" class="nav-item">Registros</a>
@@ -43,26 +43,33 @@
           <a href="#" class="cta-button" style="margin-left: 5px;">Descubre Más →</a>
         </div>
       </article>
-      <section class="minimal-container w3-hover-white" style="margin-left: -420px;">
+      <section class="minimal-container w3-hover-white minimal w3-hide-medium w3-hide-large" style="margin-left: -250px;">
+        <img src="Rectangle 2.png">
+      </section>
+      <section class="minimal-container w3-hover-white w3-hide-small" style="margin-left: -250px;">
         <img src="Rectangle 2.png" onclick="shakeElement(this)">
       </section>
-      <section class="minimal-container w3-hover-white">
+      <section class="minimal-container w3-hover-white w3-hide-small">
         <img src="Rectangle 3.png" onclick="shakeElement(this)">
       </section>
-      <section class="minimal-container w3-hover-white">
+      <section class="minimal-container w3-hover-white w3-hide-small">
         <img src="Rectangle 4.png" onclick="shakeElement(this)">
       </section>
-      <section class="minimal-container w3-hover-white">
+      <!-- filter:drop-shadow(10px 1px 1px rgb(0, 0, 0)) -->
+      <!--section class="minimal-container w3-hover-white w3-hide-small">
+      <img src="firelarge.gif" width="500px" height="400px" style="margin-left: 5px;margin-top: -305px;opacity: 0.2;z-index: -1;" frameBorder="0">
+      </section-->
+      <section class="minimal-container w3-hover-white w3-hide-small">
         <img src="Rectangle 5.png" onclick="shakeElement(this)">
       </section>
-      <section class="minimal-container w3-hover-white">
+      <section class="minimal-container w3-hover-white w3-hide-small">
         <img src="Rectangle 6.png" onclick="shakeElement(this)">
       </section>
-      <section class="minimal-container w3-hover-white">
+      <section class="minimal-container w3-hover-white w3-hide-small">
         <img src="Rectangle 7.png" onclick="shakeElement(this)">
       </section>
       <aside class="canalizar-section">
-        <h3 class="canalizar-title" style="margin-right: 20px;">¿Qué es canalizar?</h3>
+        <h3 class="canalizar-title w3-hide-small" style="margin-right: 20px;">¿Qué es canalizar?</h3>
         <ul class="canalizar-list"  style="margin-right: 20px;">
           <li class="canalizar-item">Meditación</li>
           <li class="canalizar-item">Rituales</li> 
@@ -79,14 +86,13 @@
         </div>
       </aside>
     </div>
-  
 <!-- Oráculos Container -->
 <div class="w3-row w3-padding-64" id="oraculos" style="margin-top: -100px;">
     <div class="content-wrapper2">
-      <article class="mancias-info sec2" style="margin-left: 50px;">
+      <article class="mancias-info sec2" style="margin-left: 20px;">
         <h1 class="mancias-title2">Lecturas Oráculares<br /> y Cartomancia<br /></h1>
         <section class="rounded-container">
-        <div class="mancias-description" >
+        <div class="mancias-description4" >
             <ul class="description-text2" >
               <li>
                 Según las cartas y su posicionamiento, el lector <br />
@@ -117,25 +123,59 @@
                 resolver en tu vida.
               </li>
             </ul>
-          <a href="#" class="cta-button2" role="button">Toma una carta!</a>
+          <a class="cta-button2" role="button" onclick="mostrarLugarAleatorio()">Toma una carta!</a>
         </div>
-      <section class="minimal-container3 w3-hide-small">
+      <section class="minimal-container3 w3-hide-small seccion" style="z-index: -1;">
         <img src="Rectangle 11.png" style="margin-left: 20px;margin-top: -350px;">
         <img src="Rectangle 12.png" style="margin-left: -350px;margin-top: -350px;">
       </section>
     </section>
       </article>
-      <section class="image-container" style="margin-top: 100px;margin-right: 20px;">
-        <img src="paño3.png" class="foreground-image" alt="Foreground image" onclick="shakeElement(this)">
+      <section class="image-container seccion" style="margin-top: 100px;margin-left: -100px;">
+    <!--img src="paño3.png" class="foreground-image" alt="Foreground image" onclick="shakeElement(this)"-->
+    <!-- flip-card-container -->
+    <div class="flip-card-container" id="pickacard">
+      <div class="flip-card">
+
+        <div class="card-front">
+          <figure>
+            <div class="img-bg"></div>
+            <img width="300" height="450" class=""
+              src="cartaDorso.png"
+              alt="Image 2">
+          </figure>
+        </div>
+        <div class="card-back">
+          <figure>
+            <div class="img-bg"></div>
+            <img width="300" height="450" class=""
+              src="cartaDorso.png"
+              alt="image-2">
+          </figure>
+          <button id="resultado"></button>
+          <div class="design-container">
+            <span class="design design--1"></span>
+            <span class="design design--2"></span>
+            <span class="design design--3"></span>
+            <span class="design design--4"></span>
+            <span class="design design--5"></span>
+            <span class="design design--6"></span>
+            <span class="design design--7"></span>
+            <span class="design design--8"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- /flip-card-container -->
       </section>
     </div>
   </div>
  <!-- Registros Container --> 
   <div class="w3-row w3-padding-64 back" id="registros">
     <h1 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; text-shadow: 0 8px 8px rgba(0, 0, 0, 0.25);margin-top: 20px;display: flex;flex-direction: column;align-items: center;justify-content: center;font-size: 40px;opacity: 0.2;">BIBLIOTECA ETÉRICA</h1>
-    <section class="mancias-container" style="margin-bottom: 120px;margin-top: -20px;">
+    <section class="mancias-container3" style="margin-bottom: 120px;margin-top: -20px;">
       <div class="content-wrapper">
-        <article class="mancias-info sec2">
+        <article class="mancias-info">
           <h1 class="mancias-title2" style="text-align: left;margin-left: 20px;">Registros <br /> Akáshicos<br /></h1>
             <p class="description-text" style="margin-left: 20px;">
               Los Registros Akáshicos <br />
@@ -150,7 +190,7 @@
               potencialidades futuras.
             </p>
         </article>
-        <aside class="canalizar-section sec3">
+        <aside class="canalizar-section">
           <h3 class="description-text3" style="margin-right: 25px;">¿Cómo se realiza <br />
             una sesión de lectura?</h3>
           <ul class="canalizar-list" style="text-align: right;margin-right: 20px;">
@@ -172,35 +212,36 @@
   </div>
  <!-- Limpieza Container --> 
   <section class="content-wrapper2 back2" id="limpieza">
-      <div class="w3-quarter mancias-description" style="margin-left: 30px;margin-top: 60px;margin-bottom: 80px;">
-        <div class="w3-card w3-padding-large" style="border-radius: 20px;background-color: rgba(255, 255, 255, 0.1);">
-          <img src="sahumo.jpg" width="100%"; style="border-radius: 20px;">
-          <div class="w3-container ">
-            <h3 class="mancias-title2" style="font-size: 30px;">Sahumos</h3>
-            <p >
-              <li> Romero: Limpia y aumenta la 
-              confianza.</li>
-              <br />
-              <li>  Salvia: Purifica y protege de 
-              energías densas.</li>
-              <br />
-              <li>  Lavanda: Calma la ansiedad y propicia 
-              el sueño profundo.</li>
-              <br />
-              <li>  Ruda: Absorbe y aleja energías 
-                negativas, entre otras opciones.</li>
-            </p>
+    <div class="w3-quarter canalizar-section2">
+      <br>
+      <div class="w3-card w3-padding-large" style="border-radius: 20px;background-color: rgba(255, 255, 255, 0.1);">
+        <img  class="seccion" src="sahumo.jpg" width="100%"; style="border-radius: 20px;">
+        <div class="w3-container ">
+          <h3 class="mancias-title2" style="font-size: 30px;">Sahumos</h3>
+          <p >
+            <li> Romero: Limpia y aumenta la 
+            confianza.</li>
             <br />
-            <a href="#"  style="margin-left: -5px;" class="cta-button2" role="button">Read More!</a>
+            <li>  Salvia: Purifica y protege de 
+            energías densas.</li>
             <br />
+            <li>  Lavanda: Calma la ansiedad y propicia 
+            el sueño profundo.</li>
             <br />
-            <br />
-          </div>
+            <li>  Ruda: Absorbe y aleja energías 
+              negativas, entre otras opciones.</li>
+          </p>
+          <a href="#"  style="margin-left: -5px;" class="cta-button2" role="button">Read More!</a>
+          <br />
+          <br />
         </div>
       </div>
-      <div class="w3-quarter canalizar-section2" style="margin-top: 60px;margin-bottom: 80px;">
+      
+    </div>
+      <div class="w3-quarter canalizar-section2">
+        <br>
         <div class="w3-card w3-padding-large" style="border-radius: 20px;background-color: rgba(255, 255, 255, 0.1);">
-          <img src="sahumo2.jpg" width="100%"; style="border-radius: 20px;">
+          <img  class="seccion" src="sahumo2.jpg" width="100%"; style="border-radius: 20px;z-index: -1;">
           <div class="w3-container">
             <h3 class="mancias-title2" style="font-size: 30px;">Intención consciente</h3>
             <p>
@@ -216,36 +257,33 @@
   mantras o repetir afirmaciones 
   positivas.</li>
             </p>
-            <br />
             <a href="#"  style="margin-left: -2px;" class="cta-button2" role="button">Read More!</a>
-            <br />
             <br />
             <br />
           </div>
         </div>
       </div>
-      <aside class="w3-quarter canalizar-section2" style="margin-top: 60px;margin-bottom: 80px;margin-right: 20px;">
+      <div class="w3-quarter canalizar-section2" style="margin-right: 20px;">
+        <br>
         <div class="w3-card w3-padding-large" style="border-radius: 20px;background-color: rgba(255, 255, 255, 0.1);">
-          <img src="sahumo3.jpg" width="100%"; style="border-radius: 20px;">
+          <img class="seccion" src="sahumo3.jpg" width="100%"; style="border-radius: 20px;">
           <div class="w3-container">
             <h3 class="mancias-title2" style="font-size: 30px;">Beneficios</h3>
             <p>
-               <li> Limpia y purifica la energía del 
-                espacio.</li>
+               <li>Elimina bloqueos emocionales y pensamientos negativos que afectan tu bienestar.</li>
                 <br />
                 <li>Atrae vibraciones positivas y aleja
                 las negativas.</li>
                 <br />
-                <li>Ayuda a crear armonía y equilibrio.</li>
-            </p>
-            <br />
+                <li>Esto puede ayudarte a sentirte más ligero, más centrado y con mayor claridad mental.</li>
+                <br />
+              </p>
             <a href="#" style="margin-left: -2px;" class="cta-button2" role="button">Read More!</a>
-            <br />
             <br />
             <br />
           </div>
         </div>
-      </aside>
+      </div>
     </section>
  <!-- Reiki Container --> 
  <section class="w3-container back3" id="reiki">
@@ -285,10 +323,13 @@ emocional y espiritual.
  </section>
 <!-- Chamanismo Container --> 
   <section class="content-wrapper2 back4" id="chamanismo">
-    <div class="w3-quarter canalizar-section2 sec2" style="margin-left: 30px;margin-top: 100px;margin-bottom: 100px;">
-        <img src="Star 1.png" width="100%"; style="border-radius: 20px;">
-        <h1 class="mancias-title2">Munay Ki</h1>
-          <p class="description-text"  style="font-size: 15px;">
+    <div class="w3-quarter canalizar-section2" style="margin-left: 20px;margin-top: 100px;margin-bottom: 100px;align-items: center;">
+        <!--video video onloadstart="this.muted=true" autoplay loop
+        src="Subilo aca (1).mp4"></video-->
+      <img src="Star 1.png" width="80%"; style="border-radius: 20px;align-items: center;z-index: 1;opacity: 0.6;">
+      <img src="Subilo aca (4).gif" width="300px" height="400px" style="margin-left: 5px;margin-top: -475px;opacity: 0.2;" frameBorder="0"> <!-- filter:drop-shadow(10px 1px 1px rgb(0, 0, 0)) -->  
+      <h1 class="mancias-title2" style="margin-top: 125px;">Munay Ki</h1>
+          <p class="description-text"  style="font-size: 15px;z-index: 1;margin-top: 20px;">
             Proviene del idioma quechua <br />
 y se traduce como “Te amo” <br />
 o “Sé como tú eres”. <br />
@@ -299,11 +340,11 @@ nuestra verdadera naturaleza.
           </p>
       </div>
 
-    <div class="w3-quarter canalizar-section2 w3-hide-small" style="margin-top: 150px;">
+    <div class="w3-quarter canalizar-section2 w3-hide-small seccion" style="margin-top: 100px;">
         <img src="Star 2.png" width="120%"  onclick="shakeElement(this)">
     </div>
-
-      <aside class="w3-quarter canalizar-section2 sec2" style="margin-top: 100px;margin-bottom: 100px;">
+    
+      <aside class="w3-quarter canalizar-section2 sec2" style="margin-top: 100px;margin-bottom: 100px;align-items: center;">
         <h1 class="mancias-title2">Ritos Chamanicos</h1>
           <p class="description-text" style="font-size: 15px;text-align: right;margin-right: 40px;">
             Los Q’eros, considerados <br />
@@ -314,7 +355,7 @@ debido a una profecía que <br />
 hablaba de tiempos en los que <br />
 la humanidad los necesitaría.
           </p>
-          <img src="Rectangle 19.png" width="60%"; style="border-radius: 20px;margin-left:90px;margin-top: 10px;">
+          <img src="Rectangle 19.png" width="60%"; style="border-radius: 20px;align-items: center;">
       </aside>
    </section>
    <!-- Footer -->
@@ -322,33 +363,71 @@ la humanidad los necesitaría.
     <div class="content-wrapper5">
       <article class="w3-quarter">
       <ul style="margin-top: 60px;margin-bottom: -60px;margin-left: 6px;">
-      <il>Meditación</il><br>
-      <il>Rituales</il> <br>
-      <il>Limpiezas</il><br>
-      <il>Sanación</il><br>
-      <il>Sueños</il>
+      <il>Meditación</il><img style="width: 9%;height: 15%;" src="giphy.gif"><br>
+      <il>Rituales</il><img style="width: 9%;height: 15%;" src="giphy.gif"><br>
+      <il>Limpiezas</il><img style="width: 9%;height: 15%;" src="giphy.gif"><br>
+      <il>Sanación</il><img style="width: 9%;height: 15%;" src="giphy.gif"><br>
+      <il>Sueños</il><img style="width: 9%;height: 15%;" src="giphy.gif">
       </ul>
       </article>
     </div>
     <article class="canalizar-section" style="margin-left: -10px;">
       <h5 class="mancias-description3">
-        <a class="w3-button" href="https://www.instagram.com/tormenta_cosmica_azul/"><i class="fa fa-instagram"></i></a>
+        <a class="w3-button" href="https://www.instagram.com/tormenta_cosmica_azul/"><i class="fa fa-instagram"></i></a>   
         <a class="w3-button" href="https://tormentacosmicaazul.github.io/"><i class="fa fa-github"></i></a>
         <a class="w3-button" href="https://www.linkedin.com/in/ignacio-fernández-b88631184"><i class="fa fa-linkedin"></i></a>
-        <a class="w3-button" href=""><i class="fa fa-map-marker"></i></a>
-        <a class="w3-button" href=""><i class="fa fa-whatsapp"></i></a>
-        <a class="w3-button" href=""><i class="fa fa-envelope-o"></i></a>
+        <a class="w3-button" href="https://maps.app.goo.gl/9niprLEAUbtfEnGn9"><i class="fa fa-map-marker"></i></a>
+        <a class="w3-button" href="+54 03434704479"><i class="fa fa-whatsapp"></i></a>
+        <a class="w3-button" href="oxlahun.cauac.39@gmail.com"><i class="fa fa-envelope-o"></i></a>
       </h5>
     </article>
     <h6 style="margin-left: 45px;margin-top: -10px;">Powered by Ifernández</h6> 
   </footer>
 <script>
+const lugares = [
+'El Mago: Poder creativo y habilidades manifestadas.',
+'La Papisa: Sabiduría intuitiva y misterio femenino.',
+'La Emperatriz: Fertilidad y abundancia.',
+'El Emperador: Autoridad y estructura.',
+'El Sumo Sacerdote: Espiritualidad y guía.',
+'Los Enamorados: Elección y amor.',
+'El Carro: Voluntad y dirección.',
+'La Justicia: Equilibrio y karma.',
+'El Ermitaño: Búsqueda interior y soledad.',
+'La Rueda de la Fortuna: Cambio y destino.',
+'La Fuerza: Coraje y dominio.',
+'El Colgado: Sacrificio y perspectiva.',
+'La Muerte: Transformación y renacimiento.',
+'La Templanza: Armonía y equilibrio.',
+'El Diablo: Tentación y pasión.',
+'La Torre: Crisis y revelación.',
+'La Estrella: Esperanza y inspiración.',
+'La Luna: Intuición y engaño.',
+'El Sol: Alegría y vitalidad.',
+'El Juicio: Renovación y evaluación.',
+'El Mundo: Logro y realización.',
+'El Loco: Viaje sin restricciones y espontaneidad.'
+        ];
+
+        function elegirLugarAleatorio() {
+            const indiceAleatorio = Math.floor(Math.random() * lugares.length);
+            return lugares[indiceAleatorio];
+        }
+
+        function mostrarLugarAleatorio() {
+            const lugarSeleccionado = elegirLugarAleatorio();
+            document.getElementById('resultado').textContent = `${lugarSeleccionado}`;
+            const pickACardElement = document.getElementById('pickacard');
+            pickACardElement.style.opacity = 1;
+        }
   function shakeElement(element) {
   element.classList.add('shake-active');
   setTimeout(() => {
     element.classList.remove('shake-active');
   }, 500); // Duración de la animación en milisegundos
 }
+/***********************************************************************************************/
+
 </script>
 </body>
 </html>    
