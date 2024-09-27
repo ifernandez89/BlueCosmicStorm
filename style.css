@@ -26,11 +26,51 @@ body {
     background-size: 100% 100%;
   }
   .back5{
-    background-image: url(paño5.png);
+    background-image: url(cartomanciaCollage2.png);
     background-size: 100% 100%;
   }
   .back6{
-    background-image: url(meditacion.png);
+    background-image: url(meditacionCollage.png);
+    background-size: 100% 100%;
+  }
+  .back7{
+    background-image: url(ritosCollage2.png);
+    background-size: 100% 100%;
+  }
+  .back8{
+    background-image: url(espiritismoCollage.png);
+    background-size: 100% 100%;
+  }
+  .back9{
+    background-image: url(sanacionCollage3.png);
+    background-size: 100% 100%;
+  }
+  .back10{
+    background-image: url(pensamientosCollage.png);
+    background-size: 100% 100%;
+  }
+  .back11{
+    background-image: url(dreamsCollage.png);
+    background-size: 100% 100%;
+  }
+  .back12{
+    background-image: url(antropoCollage.png);
+    background-size: 100% 100%;
+  }
+  .back13{
+    background-image: url(teoCollage.png);
+    background-size: 100% 100%;
+  }
+  .back14{
+    background-image: url(cabalaCollage.png);
+    background-size: 100% 100%;
+  }
+  .back15{
+    background-image: url(sincro.jpg);
+    background-size: 100% 100%;
+  }
+  .back16{
+    background-image: url(zodiac.webp);
     background-size: 100% 100%;
   }
   .sec2{
@@ -121,7 +161,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: -150px;
+    /*margin-top: -150px;*/
   }
   .header { 
     display: flex; 
@@ -225,7 +265,13 @@ font: 30px BIZ UDGothic, sans-serif;
     margin-bottom: 100px;
   }
   .content-wrapper5 {
-    display: flex;
+    display:block;
+    width: 100%;
+    font-weight: 400;
+    justify-content: left;
+  }
+  .content-wrapper6 {
+    display:flex;
     width: 100%;
     font-weight: 400;
     justify-content: left;
