@@ -587,7 +587,7 @@ a:visited {
 /* Regla base para cartas dentro del grupo:
    más juntas (-110px) y con rotación por variable CSS */
 .hero-cards-group > .minimal-container {
-  margin-left: -80px;
+  margin-left: -60px;
   transform: rotate(var(--card-rot, 0deg));
   /* Pivote en la BASE de la imagen (~160px abajo del container de altura 0)
      → el abanico abre HACIA ARRIBA (grandes arriba, juntas abajo) */
@@ -602,11 +602,11 @@ a:visited {
 
 /* Rotaciones en abanico para los 7 hijos
    (el primero es la carta mobile oculta en desktop) */
-.hero-cards-group > .minimal-container:nth-child(1) { --card-rot:   33deg; }
-.hero-cards-group > .minimal-container:nth-child(2) { --card-rot:  18deg; }
-.hero-cards-group > .minimal-container:nth-child(3) { --card-rot:  8deg; }
-.hero-cards-group > .minimal-container:nth-child(4) { --card-rot:   -8deg; }
-.hero-cards-group > .minimal-container:nth-child(5) { --card-rot:  -18deg; }
+.hero-cards-group > .minimal-container:nth-child(1) { --card-rot:   30deg; }
+.hero-cards-group > .minimal-container:nth-child(2) { --card-rot:  20deg; }
+.hero-cards-group > .minimal-container:nth-child(3) { --card-rot:  10deg; }
+.hero-cards-group > .minimal-container:nth-child(4) { --card-rot:   -10deg; }
+.hero-cards-group > .minimal-container:nth-child(5) { --card-rot:  -20deg; }
 .hero-cards-group > .minimal-container:nth-child(6) { --card-rot: -30deg; }
 
 /* Hover: escala sin perder la rotación individual */
