@@ -434,24 +434,23 @@ a:link, a:visited { text-decoration: none; color: inherit; }
   justify-content: center;
   align-items: center;
   flex: 1;
-  min-width: 320px;
-  padding: 0 20px;
+  padding-left: 180px; /* Compensa el dibujo hacia la izquierda para centrar el abanico */
 }
 
 .minimal-container {
-  transition: transform 0.3s ease, z-index 0s;
+  transition: transform 0.3s ease;
+  width: 0;
+  height: 0;
+  min-width: 0;
+  min-height: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: -80px; /* Superposición de las cartas */
+  margin: 0 0 0 -180px; /* Restaura el abanico original hacia la izquierda */
   box-shadow: none;
-  z-index: 1;
+  z-index: 0;
   position: relative;
-}
-
-/* La primera carta (desktop) no necesita margen negativo respecto a otra carta */
-.hero-cards-container .minimal-container.w3-hide-small:first-of-type {
-  margin-left: 0;
+  overflow: visible;
 }
 
 .minimal-container img {
@@ -459,12 +458,10 @@ a:link, a:visited { text-decoration: none; color: inherit; }
   height: auto;
   display: block;
   pointer-events: auto;
-  border-radius: 8px; /* Pequeño borde redondeado si aplica */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* Sombra para destacarlas */
 }
 
-.minimal-container:hover {
-  transform: scale(1.1) translateY(-10px) rotate(2deg);
+.minimal-container:hover { 
+  transform: scale(1.08) rotate(4deg); 
   z-index: 10;
 }
 
