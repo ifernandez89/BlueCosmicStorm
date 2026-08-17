@@ -429,16 +429,10 @@ a:link, a:visited { text-decoration: none; color: inherit; }
 }
 
 /* ---------- Imágenes decorativas (cartas hero) ---------- */
-.hero-cards-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  padding-left: 180px; /* Compensa el dibujo hacia la izquierda para centrar el abanico */
-}
-
 .minimal-container {
   transition: transform 0.3s ease;
+  /* max-width: 0 colapsaba el contenedor y el browser no renderizaba las imágenes al recargar */
+  /* Usamos overflow:visible con dimensión mínima real */
   width: 0;
   height: 0;
   min-width: 0;
@@ -446,24 +440,22 @@ a:link, a:visited { text-decoration: none; color: inherit; }
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 0 0 -180px; /* Restaura el abanico original hacia la izquierda */
+  /* Margen negativo para el efecto de solapamiento decorativo */
+  margin: 0 0 0 -180px;
   box-shadow: none;
+  /* z-index bajo para que nunca tape el texto */
   z-index: 0;
   position: relative;
   overflow: visible;
 }
-
 .minimal-container img {
-  width: 160px;
+  /* Imagen con tamaño fijo — independiente del contenedor colapsado */
+  width: 210px;
   height: auto;
   display: block;
   pointer-events: auto;
 }
-
-.minimal-container:hover { 
-  transform: scale(1.08) rotate(4deg); 
-  z-index: 10;
-}
+.minimal-container:hover { transform: scale(1.08) rotate(4deg); }
 
 /* El texto del hero siempre por encima de las cartas */
 .mancias-info {
