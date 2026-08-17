@@ -575,8 +575,7 @@ a:visited {
 
 /* Grupo central que ocupa el espacio entre los dos textos */
 .hero-cards-group {
-  flex: 1;
-  min-width: 300px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -588,7 +587,7 @@ a:visited {
 /* Regla base para cartas dentro del grupo:
    más juntas (-110px) y con rotación por variable CSS */
 .hero-cards-group > .minimal-container {
-  margin-left: -110px;
+  margin-left: -80px;
   transform: rotate(var(--card-rot, 0deg));
   /* Pivote en la BASE de la imagen (~160px abajo del container de altura 0)
      → el abanico abre HACIA ARRIBA (grandes arriba, juntas abajo) */
@@ -603,13 +602,12 @@ a:visited {
 
 /* Rotaciones en abanico para los 7 hijos
    (el primero es la carta mobile oculta en desktop) */
-.hero-cards-group > .minimal-container:nth-child(1) { --card-rot:   0deg; }
-.hero-cards-group > .minimal-container:nth-child(2) { --card-rot: -25deg; }
-.hero-cards-group > .minimal-container:nth-child(3) { --card-rot: -15deg; }
-.hero-cards-group > .minimal-container:nth-child(4) { --card-rot:  -5deg; }
-.hero-cards-group > .minimal-container:nth-child(5) { --card-rot:   5deg; }
-.hero-cards-group > .minimal-container:nth-child(6) { --card-rot:  15deg; }
-.hero-cards-group > .minimal-container:nth-child(7) { --card-rot:  25deg; }
+.hero-cards-group > .minimal-container:nth-child(1) { --card-rot:   33deg; }
+.hero-cards-group > .minimal-container:nth-child(2) { --card-rot:  18deg; }
+.hero-cards-group > .minimal-container:nth-child(3) { --card-rot:  8deg; }
+.hero-cards-group > .minimal-container:nth-child(4) { --card-rot:   -8deg; }
+.hero-cards-group > .minimal-container:nth-child(5) { --card-rot:  -18deg; }
+.hero-cards-group > .minimal-container:nth-child(6) { --card-rot: -30deg; }
 
 /* Hover: escala sin perder la rotación individual */
 .hero-cards-group > .minimal-container:hover {
